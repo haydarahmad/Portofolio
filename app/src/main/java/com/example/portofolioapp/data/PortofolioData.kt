@@ -45,7 +45,7 @@ object PortofolioData {
 
     val listAppAndroid: ArrayList<Portofolio>
         get() {
-            val list: ArrayList<Portofolio> = arrayListOf<Portofolio>()
+            val list: ArrayList<Portofolio> = arrayListOf()
             for (position in title.indices) {
                 val android = Portofolio()
                 android.title = title[position]
@@ -84,7 +84,7 @@ object PortofolioData {
 
     val listDataExperience: ArrayList<Portofolio>
         get() {
-            val list: ArrayList<Portofolio> = arrayListOf<Portofolio>()
+            val list: ArrayList<Portofolio> = arrayListOf()
             for (position: Int in titleExperience.indices) {
                 val experience = Portofolio()
                 experience.title = titleExperience[position]

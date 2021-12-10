@@ -1,12 +1,9 @@
 package com.example.portofolioapp
 
 
-import android.content.ClipData
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.portofolioapp.data.Portofolio
 import com.example.portofolioapp.databinding.ItemAndroidBinding
@@ -30,7 +27,7 @@ class RVAndroidAdapter: RecyclerView.Adapter<RVAndroidAdapter.AndroidViewHolder>
 
 
     override fun onBindViewHolder(holder: AndroidViewHolder, position: Int) {
-    val listData : Portofolio = listData[position]
+        val listData : Portofolio = listData[position]
         holder.bind(listData)
     }
 

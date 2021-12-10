@@ -17,21 +17,29 @@ import com.example.portofolioapp.databinding.FragmentExperienceBinding
 
 class ExperienceFragment : Fragment() {
 
-    private val _binding: FragmentExperienceBinding? = null
-    private val binding: FragmentExperienceBinding get() = binding!!
+    private var _binding: FragmentExperienceBinding? = null
+    private val binding: FragmentExperienceBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_experience, container, false)
+        _binding =  FragmentExperienceBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val adapterExperience = RVExperienceAdapter()
+        adapterExperience.setData(PortofolioData.listDataExperience)
+
+        with(binding.rvExperience) {
+            layoutManager = StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL)
+            setHasFixedSize(true)
+            adapter = adapterExperience
+        }
 
         adapterExperience.onItemClicked = { experience ->
             findNavController().navigate(
@@ -41,13 +49,6 @@ class ExperienceFragment : Fragment() {
             )
         }
 
-        adapterExperience.setData(PortofolioData.listDataExperience)
-
-        with(binding.rvExperience) {
-            layoutManager = StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL)
-            setHasFixedSize(true)
-            adapter = adapterExperience
-        }
 
     }
 

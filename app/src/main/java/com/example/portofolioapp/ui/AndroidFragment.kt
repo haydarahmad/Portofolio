@@ -24,7 +24,7 @@ private val binding:FragmentAndroidBinding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAndroidBinding.inflate(inflater,container,false)
         return binding.root
     }

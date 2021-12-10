@@ -19,7 +19,7 @@
     <item
         android:id="@+id/uiuxFragment"
         android:icon="@drawable/uiux"
-        android:title="UIUX"/>
+        android:title="UI/UX"/>
     <item
         android:id="@+id/settingFragment"
         android:icon="@drawable/setting"

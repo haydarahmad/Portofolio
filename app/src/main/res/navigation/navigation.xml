@@ -20,6 +20,9 @@
         android:name="com.example.portofolioapp.ui.ExperienceFragment"
         android:label="experience"
         tools:layout="@layout/fragment_experience" >
+        <argument
+            android:name="experienceDetailFragment"
+            app:argType="com.example.portofolioapp.data.Portofolio" />
         <action
             android:id="@+id/action_experienceFragment_to_experienceDetailFragment"
             app:destination="@id/experienceDetailFragment" />
@@ -35,7 +38,7 @@
         android:label="setting"
         tools:layout="@layout/fragment_setting" />
     <fragment
-        android:id="@+id/UIUxFragment"
+        android:id="@+id/uiuxFragment"
         android:name="com.example.portofolioapp.ui.UiUxFragment"
         android:label="uiux"
         tools:layout="@layout/fragment_ui_ux" />
