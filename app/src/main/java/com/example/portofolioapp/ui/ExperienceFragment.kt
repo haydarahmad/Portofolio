@@ -35,7 +35,7 @@ class ExperienceFragment : Fragment() {
 
         adapterExperience.onItemClicked = { experience ->
             findNavController().navigate(
-                ExperienceFragmentDirections.actionExperienceFragment2ToExperienceDetailFragment2(
+                ExperienceFragmentDirections.actionExperienceFragmentToExperienceDetailFragment(
                     experience
                 )
             )
